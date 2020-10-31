@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spinnerVi"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="70sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="70dp"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/viscosityunits"
+        app:layout_constraintStart_toEndOf="@+id/editTextPbase"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerH2H1" />
+
+    <EditText
+        android:id="@+id/editTextTbase"
+        android:layout_width="74dp"
+        android:layout_height="35sp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="enter value"
+        android:inputType="numberSigned|numberDecimal"
+        android:text="15"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPbase" />
+
+    <EditText
+        android:id="@+id/editTextG"
+        android:layout_width="74dp"
+        android:layout_height="35sp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="less than 1"
+        android:inputType="numberSigned|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextZ" />
+
+    <EditText
+        android:id="@+id/editTextVi"
+        android:layout_width="74dp"
+        android:layout_height="35sp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="less than 1"
+        android:inputType="numberSigned|numberDecimal"
+        android:text="0.012"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextG" />
+
+    <EditText
+        android:id="@+id/editTextZ"
+        android:layout_width="74dp"
+        android:layout_height="35sp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="enter value"
+        android:inputType="numberSigned|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextH2H1" />
+
+    <EditText
+        android:id="@+id/editTextE"
+        android:layout_width="74dp"
+        android:layout_height="35sp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="less than 1"
+        android:inputType="numberSigned|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextL" />
+
+    <EditText
+        android:id="@+id/editTextP2"
+        android:layout_width="74dp"
+        android:layout_height="35sp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="enter value"
+        android:inputType="numberSigned|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextP1" />
+
+    <EditText
+        android:id="@+id/editTextP1"
+        android:layout_width="74dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="enter value"
+        android:inputType="numberSigned|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTbase" />
+
+    <EditText
+        android:id="@+id/editTextH2H1"
+        android:layout_width="74dp"
+        android:layout_height="35sp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="H2-H1"
+        android:inputType="numberSigned|numberDecimal"
+        android:text="0"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextE" />
+
+    <EditText
+        android:id="@+id/editTextT"
+        android:layout_width="74dp"
+        android:layout_height="35sp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="enter value"
+        android:inputType="numberSigned|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextP2" />
+
+    <EditText
+        android:id="@+id/editTextL"
+        android:layout_width="74dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="enter value"
+        android:inputType="numberSigned|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextD" />
+
+    <EditText
+        android:id="@+id/editTextD"
+        android:layout_width="74dp"
+        android:layout_height="35sp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="enter value"
+        android:inputType="numberSigned|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextT" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:layout_marginStart="10dp"
+        android:text="base temprature"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="409dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:text="Flow Measurement "
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="16sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="150sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="base pressure"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:layout_marginStart="10dp"
+        android:text="pipeline effiency"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:layout_marginStart="10dp"
+        android:text="elevation difference"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:layout_marginStart="10dp"
+        android:text="pipeline length"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:layout_marginStart="10dp"
+        android:text="compressibilty factor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:layout_marginStart="10dp"
+        android:text="viscosity"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:layout_marginStart="10dp"
+        android:text="gas gravity"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:layout_marginStart="10dp"
+        android:text="pipeline diameter"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="10dp"
+        android:text="AVG Temprature"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:layout_marginStart="10dp"
+        android:text="downstream pressure"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:layout_marginStart="10dp"
+        android:text="upstream pressure"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Spinner
+        android:id="@+id/spinnerPbase"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="70sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/pressureunits"
+        app:layout_constraintStart_toEndOf="@+id/editTextPbase"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Spinner
+        android:id="@+id/spinnerTbase"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="70sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="5dp"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/tempratureunits"
+        app:layout_constraintStart_toEndOf="@+id/editTextPbase"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPbase" />
+
+    <Spinner
+        android:id="@+id/spinnerP1"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="70sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="5dp"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/pressureunits"
+        app:layout_constraintStart_toEndOf="@+id/editTextPbase"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTbase" />
+
+    <Spinner
+        android:id="@+id/spinnerL"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="70sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="5dp"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/lengthunits"
+        app:layout_constraintStart_toEndOf="@+id/editTextPbase"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerD" />
+
+    <Spinner
+        android:id="@+id/spinnerT"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="70sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="5dp"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/tempratureunits"
+        app:layout_constraintStart_toEndOf="@+id/editTextPbase"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerP2" />
+
+    <Spinner
+        android:id="@+id/spinnerP2"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="70sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="5dp"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/pressureunits"
+        app:layout_constraintStart_toEndOf="@+id/editTextPbase"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerP1" />
+
+    <Spinner
+        android:id="@+id/spinnerD"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="70sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="5dp"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/diameterunits"
+        app:layout_constraintStart_toEndOf="@+id/editTextPbase"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerT" />
+
+    <Spinner
+        android:id="@+id/spinnerH2H1"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="70sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="35dp"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/lengthunits"
+        app:layout_constraintStart_toEndOf="@+id/editTextPbase"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerL" />
+
+    <EditText
+        android:id="@+id/editTextPbase"
+        android:layout_width="74dp"
+        android:layout_height="35sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="enter value"
+        android:inputType="numberSigned|numberDecimal"
+        android:text="1.01325"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="calculate"
+        android:text="caluclate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
