@@ -1,0 +1,31 @@
+<resources>
+    <string-array name="pressureunits">
+        <item>Bar</item>
+        <item>Kpa</item>
+        <item>Psi</item>
+    </string-array>
+    <string-array name="tempratureunits">
+        <item>C</item>
+        <item>K</item>
+        <item>F</item>
+        <item>R</item>
+    </string-array>
+    <string-array name="lengthunits">
+        <item>Km</item>
+        <item>Miles</item>
+        <item>M</item>
+        <item>Feet</item>
+    </string-array>
+    <string-array name="diameterunits">
+        <item>In</item>
+        <item>Cm</item>
+        <item>Mm</item>
+    </string-array>
+    <string-array name="viscosityunits">
+        <item>Cp</item>
+        <item>Poise</item>
+        <item>Pas</item>
+        <item>Ib/Ft-s</item>
+    </string-array>
+
+</resources>
