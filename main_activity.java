@@ -2,20 +2,23 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     // define the global spinners variables so they can be accessed from anywhere
     Spinner spinnerPbase,spinnerTbase,spinnerP1,spinnerP2,spinnerT,spinnerD,spinnerL,spinnerH2H1,spinnerVi;
 // define string variables to store the selected value of spinner
     String textPbase,textTbase,textP1,textP2,textT,textD,textL,textH2H1,textVi;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,6 +80,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
     Double Pbase,Tbase,P1,P2,Tavg,Dpipe,Lpipe,Epipe,Zgas,Ggas,H2H1,Vi,Spipe,Lepipe;
     Double  panhandleA,panhandleB,waymouth,IGT;
+    double panhandleAroundOff;
+    @SuppressLint("DefaultLocale")
     public void calculate(View view) {
         EditText editTextPbase = (EditText) findViewById(R.id.editTextPbase);
         EditText editTextTbase = (EditText) findViewById(R.id.editTextTbase);
@@ -90,6 +95,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         EditText editTextH2H1 = (EditText) findViewById(R.id.editTextH2H1);
         EditText editTextZ = (EditText) findViewById(R.id.editTextZ);
         EditText editTextVi = (EditText) findViewById(R.id.editTextVi);
+        TextView textViewResult =(TextView) findViewById(R.id.textViewResult);
+
         if (editTextPbase.getText().toString().isEmpty()) {
             Toast.makeText(MainActivity.this, "please enter base pressure value", Toast.LENGTH_SHORT).show();
         }
@@ -210,8 +217,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 Lepipe=Lpipe*(Math.pow(2.718,Spipe)-1)/Spipe;
             }
             panhandleA=4.5965/1000*Epipe*(Math.pow((Tbase/Pbase),1.0788))*(Math.pow((Math.pow(P1,2)-Math.pow(2.718,Spipe)*Math.pow(P2,2))/(Math.pow(Ggas,0.8539)*Tavg*Lepipe*Zgas),0.5394))*Math.pow(Dpipe,2.6182);
-            Log.i("info",panhandleA.toString());
+
+            DecimalFormat f = new DecimalFormat("##.00");
+            panhandleAroundOff =  (double) Math.round(panhandleA * 100) / 100;
+
+
             Toast.makeText(MainActivity.this, panhandleA.toString(), Toast.LENGTH_SHORT).show();
+            textViewResult.setText(f.format(panhandleA));
+            editTextPbase.requestFocus();
+
         }
     }
 
