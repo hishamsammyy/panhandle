@@ -248,5 +248,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         textViewResult.setText("");
        editTextPbase.requestFocus();
     }
+    public void gotohome_activity(View view){
+        Intent intent = new Intent(this,home_actvity.class);
+        startActivity(intent);
 
+    }
 }
