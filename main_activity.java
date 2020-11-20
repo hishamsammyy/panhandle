@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -246,10 +247,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         editTextG.setText("");
         editTextZ.setText("");
         textViewResult.setText("");
-       editTextPbase.requestFocus();
+        editTextPbase.requestFocus();
     }
     public void gotohome_activity(View view){
         Intent intent = new Intent(this,home_actvity.class);
+        startActivity(intent);
+
+    }
+    public void gotoaga8activity(View view){
+        Intent intent = new Intent(this,aga8.class);
         startActivity(intent);
 
     }
